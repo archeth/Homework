@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data
 {
@@ -21,38 +17,60 @@ namespace Data
 
         public Card()
         {
-            Console.WriteLine($"Name = {Name}, SynCode = {SynCode}, ProjectId = {ProjectId}");
+            
         }
 
-        public string SetNewName(string name)
+        public string SetNewName()
         {
-            Name = name;
             Console.WriteLine("Name your card:");
-            name = Convert.ToString(Console.ReadLine());
+            Name = Convert.ToString(Console.ReadLine());
             return Name;
         }
 
-        public long SetNewProjectId(long projectId)
+        public long SetNewProjectId()
         {
-            ProjectId = projectId;
             Console.WriteLine("Set ProjectId for new card");
-            projectId = Convert.ToInt64(Console.ReadKey());
+            ProjectId = Convert.ToInt64(Console.ReadKey());
             return ProjectId;
         }
+
+        public class Contact
+        {
+            private long PhoneNumber;
+
+            public long SetPhoneNumber()
+            {
+                Console.WriteLine("Type your contacts Phone number");
+                PhoneNumber = Convert.ToInt64(Console.ReadLine());
+                return PhoneNumber;
+            }
+        }
+
+        public class ContactsPhoneZone: Contact
+        {
+            private long PhoneZone;
+        }
+
+        public class ContactsEmail: Contact
+        {
+            private string Email;
+            private string Alias;
+
+            public string EmailAddress()
+            {
+                Console.WriteLine("Type your contacts Email address");
+                Email = Convert.ToString(Console.ReadLine());
+                Console.WriteLine("Type your contacts alias");
+                Alias = Convert.ToString(Console.ReadLine());
+                return Email;
+                return Alias;
+            }
+        }
+
 
         static void Main(string[] args)
         {
          
         }
-
-
-        /*static void Main(string[] args)
-        {
-            Card pos = new Card();
-            string name = pos.SetNewName();
-            long synCode = 1;
-            long id = pos.SetNewProjectId();
-        }*/
-
     }
 }
