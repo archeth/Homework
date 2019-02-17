@@ -42,7 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Data\Card.cs" />
+    <Compile Include="Data\Program.cs" />
+    <Compile Include="Data\ContactsEmail.cs" />
+    <Compile Include="Data\ContactsPhoneZone.cs" />
+    <Compile Include="Data\Contact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
